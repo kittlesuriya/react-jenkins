@@ -3,12 +3,16 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+                dir ("D:\react-jenkins"){
+                    sh 'npm install' 
+                }
             }
         }
         stage('Run Dev') { 
             steps {
-                sh 'npm run dev' 
+                dir ("D:\react-jenkins"){
+                    sh 'npm run dev' 
+                }
             }
         }
     }
