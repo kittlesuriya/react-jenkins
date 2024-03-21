@@ -15,5 +15,11 @@ pipeline {
                 }
             }
         }
+        stage('copy build') { 
+            steps {
+                // Copy the 'dist' folder to the desired location
+                bat 'xcopy "D:/react-jenkins/dist" "C:/Users/user/Desktop" /s /e'
+            }
+        }
     }
 }
