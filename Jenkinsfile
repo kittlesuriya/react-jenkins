@@ -4,14 +4,14 @@ pipeline {
         stage('Build') { 
             steps {
                 dir("D:/react-jenkins"){
-                    sh 'npm install' 
+                    bat 'npm install' 
                 }
             }
         }
         stage('Run Dev') { 
             steps {
                 dir("D:/react-jenkins"){
-                    sh 'npm run dev' 
+                    bat 'npm run dev' 
                 }
             }
         }
